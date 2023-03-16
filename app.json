@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "cf7666cb-cabd-425f-a6d3-69429dab0bbf"
+      }
+    },
+    "owner": "antojoel"
   }
 }
