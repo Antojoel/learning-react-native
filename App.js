@@ -9,6 +9,7 @@ import CircleButton from './components/CircleButton';
 import IconButton from './components/IconButton';
 import EmojiPicker from "./components/EmojiPicker";
 import EmojiList from './components/EmojiList';
+import EmojiSticker from "./components/EmojiSticker";
 
 
 
@@ -58,6 +59,7 @@ export default function App() {
          placeholderImageSource={PlaceholderImage}
           selectedImage={selectedImage}
         />
+        {pickedEmoji !== null ? <EmojiSticker imageSize={40} stickerSource={pickedEmoji} /> : null}
       </View>
       {showAppOptions ? (
         <View style={styles.optionsContainer}>
