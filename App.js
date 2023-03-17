@@ -8,7 +8,6 @@ import ImageViewer from './components/ImageViewer';
 import CircleButton from './components/CircleButton';
 import IconButton from './components/IconButton';
 import EmojiPicker from "./components/EmojiPicker";
-import EmojiList from './components/EmojiList';
 
 
 
@@ -55,7 +54,7 @@ export default function App() {
     <View style={styles.container}>
       <View style={styles.imageContainer}>
         <ImageViewer
-          placeholderImageSource={PlaceholderImage}
+         placeholderImageSource={PlaceholderImage}
           selectedImage={selectedImage}
         />
       </View>
@@ -69,12 +68,12 @@ export default function App() {
         </View>
         ):(
         <View style={styles.footerContainer}>
-          <Button theme="primary" label="Choose a photo" onPress={pickImageAsync} />
+          <Button theme="Primary" label="Choose a photo" onPress={pickImageAsync} />
           <Button label="Use this photo" onPress={() => setShowAppOptions(true)} />
         </View>
       )}   
       <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
-        <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
+        {/* A list of emoji component will go here */}
       </EmojiPicker>
       <StatusBar style="auto" />
     </View>
